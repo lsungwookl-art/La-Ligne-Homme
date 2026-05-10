@@ -1,9 +1,0 @@
-{
-  "name": "vibe-coding-skills",
-  "version": "1.0.0",
-  "description": "Claude Code 스킬 & 에이전트 모음 - 한국어 워크플로우, 디자인 감사, 배포 안전장치, 에이전트 오케스트레이션 등",
-  "author": "eli-kardis",
-  "homepage": "https://github.com/eli-kardis/vibe-coding-skills",
-  "repository": "https://github.com/eli-kardis/vibe-coding-skills",
-  "license": "MIT"
-}
