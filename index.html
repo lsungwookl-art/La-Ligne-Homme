@@ -325,7 +325,6 @@
       color: var(--color-text-sub);
       max-width: 38ch;
       margin-bottom: 3rem;
-      word-break: keep-all;
     }
 
     .hero-cta-group {
@@ -435,7 +434,6 @@
       font-weight: 300;
       line-height: 1.95;
       color: var(--color-text-sub);
-      word-break: keep-all;
     }
 
     .brand-divider {
@@ -647,9 +645,13 @@
       width: 100%;
       height: 100%;
       transition: transform 0.6s var(--ease-out);
-      object-fit: cover;
-      display: block;
     }
+
+    .look-1 { background: linear-gradient(180deg, #e8e4de 0%, #c0b0a0 100%); }
+    .look-2 { background: linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%); }
+    .look-3 { background: linear-gradient(180deg, #b8b0a4 0%, #8a8078 100%); }
+    .look-4 { background: linear-gradient(180deg, #d8d0c8 0%, #a09080 100%); }
+    .look-5 { background: linear-gradient(180deg, #1e1e1e 0%, #0c0c0c 100%); }
 
     /* ─── Newsletter ─────────────────────────────────── */
     .newsletter {
@@ -966,81 +968,6 @@
       .footer-top { grid-template-columns: 1fr; }
       .hero-content { padding: 3rem 1.25rem; }
     }
-
-    /* ─── Category Nav ───────────────────────────────── */
-    .category-nav {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .cat-btn {
-      padding: 0.55rem 1.35rem;
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      border: 1px solid var(--color-border);
-      background: transparent;
-      color: var(--color-text-sub);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-
-    .cat-btn.active,
-    .cat-btn:hover {
-      background: var(--color-text);
-      color: var(--color-bg);
-      border-color: var(--color-text);
-    }
-
-    /* ─── Footer Business Info ───────────────────────── */
-    .footer-biz {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2rem 0 1.75rem;
-    }
-
-    .footer-biz-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 1.75rem;
-      font-size: 0.7rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.32);
-      line-height: 1.65;
-    }
-
-    .footer-biz-info span {
-      display: inline-flex;
-      gap: 0.4rem;
-      align-items: baseline;
-    }
-
-    .footer-biz-info strong {
-      font-weight: 400;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-    }
-
-    .footer-kakao {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 1.25rem;
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      color: rgba(255,255,255,0.5);
-      border: 1px solid rgba(255,255,255,0.18);
-      padding: 0.5rem 1rem;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .footer-kakao:hover {
-      color: var(--color-gold-lt);
-      border-color: var(--color-gold-lt);
-    }
   </style>
 </head>
 
@@ -1072,11 +999,8 @@
         <li><a href="#faq">문의</a></li>
       </ul>
 
-      <div class="nav-right" id="nav-right">
-        <a href="login.html" class="btn-header desktop-only" id="btn-login">로그인</a>
-        <a href="signup.html" class="btn-header desktop-only" id="btn-signup">회원가입</a>
-        <span class="nav-user desktop-only" id="nav-user" style="display:none;font-size:0.78rem;font-weight:400;letter-spacing:0.05em;color:var(--color-text-sub);"></span>
-        <button class="btn-header desktop-only" id="btn-logout" style="display:none;">로그아웃</button>
+      <div class="nav-right">
+        <a href="signup.html" class="btn-header desktop-only">회원가입</a>
         <a href="#collection" class="btn-header desktop-only" style="margin-left:0.5rem;">쇼핑하기</a>
         <button
           class="hamburger"
@@ -1109,7 +1033,7 @@
           남성의 선,<br /><em>La Ligne</em>
         </h1>
         <p class="hero-subtitle fade-in fade-in-delay-2">
-          라 린느 옴므는 프랑스어로 '남성의 선'을 의미합니다.<br />
+          라 린느 옴므는 프랑스어로 '남성의 선'을 의미합니다.
           깔끔한 실루엣과 미니멀한 디자인으로
           현대 남성의 감각을 완성합니다.
         </p>
@@ -1131,8 +1055,7 @@
           <div class="brand-divider fade-in"></div>
           <p class="section-body fade-in fade-in-delay-2">
             '라 린느 옴므(La Ligne Homme)'는 세련되고 감각적인 무드를 지향하는
-            남성 컨템포러리 패션 브랜드입니다.<br />
-            프랑스어로 '남성의 선'이라는 의미를 담고 있는 만큼,
+            남성 컨템포러리 패션 브랜드입니다. 프랑스어로 '남성의 선'이라는 의미를 담고 있는 만큼,
             깔끔한 실루엣과 미니멀한 디자인이 특징입니다.
             <br /><br />
             과하지 않고, 부족하지도 않게. 정제된 선 하나에 담긴 감각이
@@ -1154,14 +1077,6 @@
           </div>
           <a href="#collection" class="btn-secondary fade-in">전체 보기</a>
         </div>
-
-        <nav class="category-nav fade-in" aria-label="상품 카테고리">
-          <button class="cat-btn active" type="button">전체</button>
-          <button class="cat-btn" type="button">아우터</button>
-          <button class="cat-btn" type="button">티셔츠 / 셔츠</button>
-          <button class="cat-btn" type="button">가디건 / 니트</button>
-          <button class="cat-btn" type="button">팬츠</button>
-        </nav>
 
         <div class="collection-grid" role="list">
 
@@ -1308,17 +1223,20 @@
       </div>
 
       <div class="lookbook-strip" role="list" aria-label="룩북 이미지 모음">
-        <div class="look-item fade-in" role="listitem" tabindex="0" aria-label="Look 01">
-          <img class="look-inner" src="images/look-01.jpg" alt="Look 01" />
+        <div class="look-item fade-in" role="listitem" tabindex="0" aria-label="Look 01 — Ivory Coat">
+          <div class="look-inner look-1" role="img" aria-label="아이보리 코트 룩"></div>
         </div>
-        <div class="look-item fade-in fade-in-delay-1" role="listitem" tabindex="0" aria-label="Look 02">
-          <img class="look-inner" src="images/look-02.jpg" alt="Look 02" />
+        <div class="look-item fade-in fade-in-delay-1" role="listitem" tabindex="0" aria-label="Look 02 — All Black">
+          <div class="look-inner look-2" role="img" aria-label="올 블랙 룩"></div>
         </div>
-        <div class="look-item fade-in fade-in-delay-2" role="listitem" tabindex="0" aria-label="Look 03">
-          <img class="look-inner" src="images/look-03.jpg" alt="Look 03" />
+        <div class="look-item fade-in fade-in-delay-2" role="listitem" tabindex="0" aria-label="Look 03 — Tonal Beige">
+          <div class="look-inner look-3" role="img" aria-label="토널 베이지 룩"></div>
         </div>
-        <div class="look-item fade-in" role="listitem" tabindex="0" aria-label="Look 04">
-          <img class="look-inner" src="images/look-04.jpg" alt="Look 04" />
+        <div class="look-item fade-in" role="listitem" tabindex="0" aria-label="Look 04 — Light Grey">
+          <div class="look-inner look-4" role="img" aria-label="라이트 그레이 룩"></div>
+        </div>
+        <div class="look-item fade-in fade-in-delay-1" role="listitem" tabindex="0" aria-label="Look 05 — Midnight">
+          <div class="look-inner look-5" role="img" aria-label="미드나이트 룩"></div>
         </div>
       </div>
     </section>
@@ -1449,10 +1367,10 @@
         <div class="footer-col">
           <h4>쇼핑</h4>
           <ul>
+            <li><a href="#collection">신상품</a></li>
+            <li><a href="#collection">상의</a></li>
+            <li><a href="#collection">하의</a></li>
             <li><a href="#collection">아우터</a></li>
-            <li><a href="#collection">티셔츠 / 셔츠</a></li>
-            <li><a href="#collection">가디건 / 니트</a></li>
-            <li><a href="#collection">팬츠</a></li>
             <li><a href="#lookbook">룩북</a></li>
           </ul>
         </div>
@@ -1479,24 +1397,6 @@
 
       </div>
 
-      <div class="footer-biz">
-        <div class="footer-biz-info">
-          <span><strong>상호명</strong> 제니스 김결</span>
-          <span><strong>대표</strong> 김결</span>
-          <span><strong>주소</strong> 중구 광복로49번길 33</span>
-          <span><strong>전화</strong> 050.6977.2787</span>
-          <span><strong>이메일</strong> busanfull6567@naver.com</span>
-          <span><strong>사업자등록번호</strong> 737-68-00698</span>
-          <span><strong>통신판매업 신고번호</strong> 제 2025-부산중구-0216호</span>
-          <span><strong>개인정보보호 책임자</strong> 김결</span>
-          <span><strong>무통장입금</strong> 국민은행 473801-04-176193 (제니스)</span>
-          <span><strong>상담시간</strong> 오전 10:00 ~ 오후 4:00</span>
-        </div>
-        <a href="https://open.kakao.com/o/spCfHpui" target="_blank" rel="noopener noreferrer" class="footer-kakao">
-          카카오 오픈채팅 상담 →
-        </a>
-      </div>
-
       <div class="footer-bottom">
         <p class="footer-legal">
           &copy; 2025 La Ligne Homme. All rights reserved.
@@ -1504,6 +1404,7 @@
         <nav class="footer-legal-links" aria-label="법적 링크">
           <a href="#">개인정보 처리방침</a>
           <a href="#">이용약관</a>
+          <a href="#">사업자 정보</a>
         </nav>
       </div>
     </div>
@@ -1525,30 +1426,6 @@
   </style>
 
   <script>
-    // ── 로그인 상태 확인
-    const SESSION_KEY = 'laligne_session';
-    const sessionRaw = localStorage.getItem(SESSION_KEY) || sessionStorage.getItem(SESSION_KEY);
-    const session = sessionRaw ? JSON.parse(sessionRaw) : null;
-
-    const btnLogin  = document.getElementById('btn-login');
-    const btnSignup = document.getElementById('btn-signup');
-    const navUser   = document.getElementById('nav-user');
-    const btnLogout = document.getElementById('btn-logout');
-
-    if (session) {
-      btnLogin.style.display  = 'none';
-      btnSignup.style.display = 'none';
-      navUser.style.display   = '';
-      navUser.textContent     = session.name + '님';
-      btnLogout.style.display = '';
-
-      btnLogout.addEventListener('click', () => {
-        localStorage.removeItem(SESSION_KEY);
-        sessionStorage.removeItem(SESSION_KEY);
-        window.location.reload();
-      });
-    }
-
     // Header scroll effect
     const header = document.getElementById('header');
     const onScroll = () => {
@@ -1602,14 +1479,6 @@
     } else {
       fadeEls.forEach(el => el.classList.add('visible'));
     }
-
-    // Category nav tab toggle
-    document.querySelectorAll('.cat-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
 
     // Newsletter form
     const form = document.querySelector('.newsletter-form');

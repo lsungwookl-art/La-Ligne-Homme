@@ -659,7 +659,7 @@
         <div class="form-header">
           <p class="form-eyebrow">Create Account</p>
           <h1 class="form-title">회원가입</h1>
-          <p class="form-subtitle">이미 계정이 있으신가요? <a href="login.html" style="color:var(--color-gold);">로그인</a></p>
+          <p class="form-subtitle">이미 계정이 있으신가요? <a href="#" style="color:var(--color-gold);">로그인</a></p>
         </div>
 
         <form id="signup-form" novalidate>
@@ -825,7 +825,7 @@
           <div class="form-divider"><span>또는</span></div>
 
           <p class="form-login-link">
-            이미 회원이신가요? <a href="login.html">로그인하기</a>
+            이미 회원이신가요? <a href="#">로그인하기</a>
           </p>
 
         </form>
@@ -974,19 +974,6 @@
         const firstError = document.querySelector('.field input.error');
         if (firstError) firstError.focus();
         return;
-      }
-
-      // 사용자 저장
-      const USERS_KEY = 'laligne_users';
-      const users = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
-      const emailVal = email.value.trim();
-      if (!users.find(u => u.email === emailVal)) {
-        users.push({
-          email: emailVal,
-          password: pw.value,
-          name: lastName.value.trim() + firstName.value.trim()
-        });
-        localStorage.setItem(USERS_KEY, JSON.stringify(users));
       }
 
       // 성공 처리
